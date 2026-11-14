@@ -1,16 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 700">
 <defs>
- <linearGradient id="night" x2=".7" y2="1"><stop stop-color="#25354b"/><stop offset="1" stop-color="#101c30"/></linearGradient>
- <radialGradient id="alcove"><stop stop-color="#a4805c"/><stop offset=".58" stop-color="#68544c"/><stop offset="1" stop-color="#303648"/></radialGradient>
+ <linearGradient id="night" x2=".7" y2="1"><stop stop-color="#e9bed4"/><stop offset="1" stop-color="#c9b9e2"/></linearGradient>
+ <radialGradient id="alcove"><stop stop-color="#f9d8b9"/><stop offset=".58" stop-color="#ecb9b2"/><stop offset="1" stop-color="#c5a3c7"/></radialGradient>
  <linearGradient id="brass"><stop stop-color="#8b5e29"/><stop offset=".24" stop-color="#e2b66c"/><stop offset=".5" stop-color="#fff0ba"/><stop offset=".74" stop-color="#b88843"/><stop offset="1" stop-color="#725026"/></linearGradient>
- <linearGradient id="glass"><stop stop-color="#59435e"/><stop offset=".18" stop-color="#a28aa6"/><stop offset=".45" stop-color="#d1baca"/><stop offset=".73" stop-color="#ad93ac"/><stop offset="1" stop-color="#5f485f"/></linearGradient>
- <linearGradient id="darkglass"><stop stop-color="#122035"/><stop offset=".42" stop-color="#3d4c62"/><stop offset=".7" stop-color="#26364c"/><stop offset="1" stop-color="#101b2c"/></linearGradient>
+ <linearGradient id="glass"><stop stop-color="#66508c"/><stop offset=".18" stop-color="#a17ac5"/><stop offset=".45" stop-color="#e0bdee"/><stop offset=".73" stop-color="#bf8bd2"/><stop offset="1" stop-color="#77518c"/></linearGradient>
+ <linearGradient id="darkglass"><stop stop-color="#226765"/><stop offset=".42" stop-color="#76bcb0"/><stop offset=".7" stop-color="#43978f"/><stop offset="1" stop-color="#1e5d62"/></linearGradient>
  <linearGradient id="wax" x2="0" y2="1"><stop stop-color="#fff3d2"/><stop offset="1" stop-color="#c99d67"/></linearGradient>
  <linearGradient id="flame" x2="0" y2="1"><stop stop-color="#c65e16"/><stop offset=".45" stop-color="#f5a52d"/><stop offset="1" stop-color="#ffe496"/></linearGradient>
  <radialGradient id="light"><stop stop-color="#ffc364" stop-opacity=".5"/><stop offset=".45" stop-color="#e9a24c" stop-opacity=".12"/><stop offset="1" stop-color="#f9bc65" stop-opacity="0"/></radialGradient>
- <linearGradient id="stone" x2="0" y2="1"><stop stop-color="#c2a585"/><stop offset="1" stop-color="#796c68"/></linearGradient>
+ <linearGradient id="stone" x2="0" y2="1"><stop stop-color="#e4bbad"/><stop offset="1" stop-color="#b69bc4"/></linearGradient>
  <filter id="soft"><feGaussianBlur stdDeviation="13"/></filter>
  <filter id="tiny"><feGaussianBlur stdDeviation="3"/></filter>
+ <linearGradient id="sheen"><stop stop-color="#fff7df" stop-opacity="0"/><stop offset=".5" stop-color="#fff7df" stop-opacity=".24"/><stop offset="1" stop-color="#fff7df" stop-opacity="0"/></linearGradient>
+ <pattern id="wall-detail" width="44" height="44" patternUnits="userSpaceOnUse"><path d="m22 14 1.5 6.5L30 22l-6.5 1.5L22 30l-1.5-6.5L14 22l6.5-1.5Z" fill="#ffffff" opacity=".08"/></pattern>
+ <clipPath id="jar-clip"><path d="M164 351h211v186q0 35-106 35t-105-35Z"/></clipPath>
  <style>
  .flame{transform-box:fill-box;transform-origin:50% 100%}.glow{transform-box:fill-box;transform-origin:center}.spark{opacity:.65;transform-box:fill-box;transform-origin:center}.reflection{opacity:.2}.leaf{transform-origin:555px 540px}.back-flame{animation-delay:-.8s!important}
  @media(prefers-reduced-motion:no-preference){.flame{animation:flicker 1.9s ease-in-out infinite}.glow{animation:breathe 3.7s ease-in-out infinite}.spark{animation:rise 6s ease-out infinite;opacity:0}.s2{animation-delay:-2s;animation-duration:7s}.s3{animation-delay:-4.5s;animation-duration:8s}.s4{animation-delay:-1s;animation-duration:5.5s}.s5{animation-delay:-3.5s;animation-duration:6.8s}.reflection{animation:reflections 3.7s ease-in-out infinite}.leaf{animation:sway 8s ease-in-out infinite}.orbit{animation:twinkle 5s ease-in-out infinite}}
@@ -20,20 +23,26 @@
  @keyframes reflections{0%,100%{opacity:.14}50%{opacity:.32}}
  @keyframes sway{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(2deg)}}
  @keyframes twinkle{0%,100%{opacity:.25}50%{opacity:.8}}
+ @media(prefers-reduced-motion:no-preference){.glass-sheen{animation:glass-light 9s ease-in-out infinite}.table-light{animation:reflections 4.5s ease-in-out infinite}}
+ @keyframes glass-light{0%,100%{transform:translateX(-35px);opacity:.2}50%{transform:translateX(30px);opacity:.65}}
  *{animation:none!important}</style>
 </defs>
 <path fill="url(#night)" d="M0 0h660v700H0z"/>
-<path d="M65 555V271a265 265 0 0 1 530 0v284Z" fill="url(#alcove)" stroke="url(#brass)" stroke-width="3"/>
-<path d="M82 552V273a248 248 0 0 1 496 0v279" fill="none" stroke="#dfb56d" stroke-opacity=".3"/>
-<path d="M330 19v55m-18-42 18 20 18-20" fill="none" stroke="#d5ac67" stroke-width="1" opacity=".5"/>
-<circle cx="330" cy="85" r="4" fill="#e8c78d"/>
-<ellipse class="glow" cx="279" cy="326" rx="235" ry="245" fill="url(#light)"/>
+<path fill="url(#wall-detail)" d="M0 0h660v700H0z"/>
+<path d="M65 555V156q0-70 70-70h390q70 0 70 70v399Z" fill="url(#alcove)" stroke="url(#brass)" stroke-width="3"/>
+<path d="M82 552V157q0-54 54-54h388q54 0 54 54v395" fill="none" stroke="#dfb56d" stroke-opacity=".3"/>
+
+
+
+
+<circle cx="469" cy="197" r="58" fill="#ffe5bd" opacity=".45"/><path d="M99 176q129-80 270-28" fill="none" stroke="#fff3df" stroke-width="5" opacity=".25"/><ellipse class="glow" cx="279" cy="326" rx="235" ry="245" fill="url(#light)"/>
 <path d="M0 555q330-24 660 0v145H0Z" fill="url(#stone)"/>
 <path d="m0 628 660-29M0 671l660-30" stroke="#e4caa4" stroke-width="1" opacity=".13"/>
 <ellipse cx="343" cy="582" rx="235" ry="36" fill="#111a28" opacity=".35" filter="url(#soft)"/>
 <path d="M102 555h457v35q-228 59-457-2Z" fill="url(#brass)"/>
 <ellipse cx="330" cy="555" rx="228" ry="42" fill="#b99d79" stroke="#efcf91" stroke-width="2"/>
 <ellipse cx="330" cy="555" rx="214" ry="34" fill="#c8b294" stroke="#927141" stroke-width=".8"/>
+<path d="M127 577q205 37 410-1" fill="none" stroke="#fff0bc" stroke-width="2" opacity=".55"/>
 <!-- Navy glass candle, behind the main vessel. -->
 <g>
  <path d="M366 343h136v177q0 25-68 26t-68-26Z" fill="url(#darkglass)" stroke="#d3ab65" stroke-width="1.5"/>
@@ -55,14 +64,16 @@
  <ellipse cx="269" cy="351" rx="106" ry="21" fill="url(#brass)"/>
  <ellipse cx="269" cy="348" rx="99" ry="16" fill="#634c55"/>
  <ellipse cx="269" cy="346" rx="94" ry="13" fill="url(#wax)"/>
+ <path d="M179 347q23 6 49 7m69 0q33-1 61-8" stroke="#fff8e5" stroke-width="1.2" opacity=".7" fill="none"/>
  <ellipse cx="269" cy="345" rx="33" ry="8" fill="#fbd6a0"/>
  <ellipse class="reflection" cx="269" cy="345" rx="54" ry="10" fill="#fff4c9"/>
  <path d="M269 344q-3-10 0-19" stroke="#4a3020" stroke-width="3.5" fill="none" stroke-linecap="round"/>
  <ellipse class="glow" cx="269" cy="295" rx="110" ry="120" fill="url(#light)"/>
  <g class="flame"><path d="M268 253c-3 21-28 37-22 58q5 18 23 18c17-1 24-15 20-29-4-17-18-27-21-47Z" fill="url(#flame)" stroke="#d18624" stroke-width=".8"/><path d="M269 281c-3 14-17 28-10 40q8 13 17 2c9-11-4-27-7-42Z" fill="#ffe8a0"/><path d="M269 307q-10 16 0 22 10-6 0-22" fill="#fff9d9"/></g>
  <path class="reflection" d="M181 377v150m9-148v158" stroke="#fff4e4" stroke-width="4" stroke-linecap="round"/>
- <path d="M352 375v160" stroke="#fce2bf" opacity=".16" stroke-width="2"/>
- <rect x="202" y="409" width="134" height="105" rx="3" fill="#f6e9d3" stroke="url(#brass)" stroke-width="2"/>
+ <path d="M168 371q99 30 202 0" stroke="#f8d8ee" stroke-width="1.5" opacity=".4" fill="none"/><path d="M352 375v160" stroke="#fce2bf" opacity=".16" stroke-width="2"/>
+ <g clip-path="url(#jar-clip)"><path class="glass-sheen" d="m232 350 35 0-45 225h-35Z" fill="url(#sheen)"/><path d="M173 542q97 40 194-1" stroke="#f5d1c7" stroke-width="4" opacity=".2" fill="none"/></g>
+ <path d="M169 525v12q0 31 100 31t101-31v-12q-100 32-201 0Z" fill="#543b72" opacity=".25"/><path d="M174 545q96 33 189 0" fill="none" stroke="#f3c9ea" stroke-width="1.5" opacity=".6"/><rect x="202" y="409" width="134" height="105" rx="3" fill="#f6e9d3" stroke="url(#brass)" stroke-width="2"/>
  <rect x="208" y="415" width="122" height="93" rx="1" fill="none" stroke="#b78c49" stroke-width=".6"/>
  <path d="m269 423-4 7 4-2 4 2Z" fill="#ab7d37"/>
  <text x="269" y="454" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="29" fill="#594254">Saanjh</text>
@@ -70,8 +81,9 @@
  <path d="M225 485h88" stroke="#b78c49" stroke-width=".7"/>
  <text x="269" y="499" text-anchor="middle" font-family="sans-serif" font-size="7" letter-spacing="2" fill="#7c6445">A LITTLE EVERYDAY WARMTH</text>
 </g>
-<g class="leaf" fill="url(#brass)" stroke="#dab272" stroke-width=".6"><path d="M557 565q-44-159 12-307" fill="none" stroke-width="2"/><path d="M548 496q-55-29-43-66 39 12 43 66Zm-3-62q42-26 35-57-34 11-35 57Zm1-58q-42-29-29-57 31 10 29 57Zm11-54q36-18 26-48-27 12-26 48Z"/></g>
+<g class="leaf" fill="#65a48b" stroke="#dab272" stroke-width=".6"><path d="M557 565q-44-159 12-307" fill="none" stroke-width="2"/><path d="M548 496q-55-29-43-66 39 12 43 66Zm-3-62q42-26 35-57-34 11-35 57Zm1-58q-42-29-29-57 31 10 29 57Zm11-54q36-18 26-48-27 12-26 48Z"/></g>
 <g fill="#fbd78d"><path class="spark" d="m228 256 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/><path class="spark s2" d="m308 228 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/><path class="spark s3" d="m286 188 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z"/><circle class="spark s4" cx="245" cy="221" r="2"/><circle class="spark s5" cx="317" cy="288" r="2"/><path class="orbit" d="m472 175 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/><circle class="orbit" cx="191" cy="190" r="1.8"/><circle class="orbit" cx="397" cy="122" r="1.5"/></g>
 <ellipse class="reflection" cx="279" cy="596" rx="78" ry="10" fill="#ffd58c" filter="url(#tiny)"/>
-<text x="330" y="654" text-anchor="middle" fill="#f0d9ae" font-family="Georgia,serif" font-style="italic" font-size="17" letter-spacing="1">a softer kind of evening</text>
+<g class="table-light" fill="#ffdaa0" opacity=".3"><ellipse cx="272" cy="613" rx="44" ry="3"/><ellipse cx="280" cy="624" rx="24" ry="2"/><ellipse cx="435" cy="584" rx="32" ry="3"/></g>
+<text x="330" y="654" text-anchor="middle" fill="#68476e" font-family="Georgia,serif" font-style="italic" font-size="17" letter-spacing="1">a softer kind of evening</text>
 </svg>

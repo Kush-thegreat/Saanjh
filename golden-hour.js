@@ -11,6 +11,8 @@
   const syncFlame = () => {
     const image = document.querySelector('.hero-visual>img[src*="hero"]');
     if (image) image.src = motionAllowed() ? 'assets/hero-luminous.svg' : 'assets/hero-luminous-still.svg';
+    const story = document.querySelector('.ritual-art>img');
+    if (story) story.src = motionAllowed() ? 'assets/ritual.svg' : 'assets/ritual-still.svg';
   };
   syncFlame();
   const button = document.createElement('button');

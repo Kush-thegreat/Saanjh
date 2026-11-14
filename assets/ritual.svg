@@ -1,1 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 600"><defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#a78cbe"/><stop offset="1" stop-color="#f3e9d7"/></linearGradient><radialGradient id="glow"><stop stop-color="#ffe7a0" stop-opacity=".8"/><stop offset="1" stop-color="#fff4c7" stop-opacity="0"/></radialGradient><filter id="shadow"><feGaussianBlur stdDeviation="10"/></filter><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".75" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".055"/></feComponentTransfer><feBlend in="SourceGraphic" mode="multiply"/></filter></defs><g filter="url(#grain)"><path fill="#a78cbe" d="M0 0h660v600H0z"/><path d="M0 0h225L590 600H350Z" fill="#cfbbdf" opacity=".5"/><path d="M330 0h95L660 380v160Z" fill="#fff1d7" opacity=".18"/><path d="M0 450Q330 420 660 470v130H0Z" fill="#79618f"/><path d="M65 430l265-60 145 85-266 69Z" fill="#d5c1a1"/><path d="M70 421l260-60 139 82-260 67Z" fill="#fff3df"/><path d="M210 506l-1 18" stroke="#b39352" stroke-width="2"/><ellipse cx="502" cy="454" rx="83" ry="24" fill="#4b3a60" opacity=".35"/><path d="M462 373q-4 71 51 71t54-71" fill="#e4d3b0"/><ellipse cx="513" cy="373" rx="54" ry="16" fill="#fff5e4"/><ellipse cx="513" cy="374" rx="45" ry="11" fill="#795c3c"/><path d="M566 383q48-13 35 23-10 20-41 16" fill="none" stroke="#e4d3b0" stroke-width="12"/><g><defs><linearGradient id="vessel1" x2="1"><stop stop-color="#d2bf9a"/><stop offset=".35" stop-color="#fff1d7"/><stop offset=".8" stop-color="#fff1d7"/><stop offset="1" stop-color="#d2bf9a"/></linearGradient></defs><ellipse cx="292.0" cy="461" rx="118.80000000000001" ry="17" fill="#55432c" opacity=".17" filter="url(#shadow)"/><path d="M182 247 H362 V426 Q362 459 272.0 459 Q182 459 182 426Z" fill="url(#vessel1)"/><ellipse cx="272.0" cy="247" rx="90.0" ry="17" fill="#d2bf9a"/><ellipse cx="272.0" cy="245" rx="85.0" ry="13" fill="#fff1d4"/><path d="M272.0 244q-3 -8 0 -14" fill="none" stroke="#514338" stroke-width="2.5"/><ellipse cx="272.0" cy="203" rx="65" ry="80" fill="url(#glow)"/><path d="M 272.0 172 C 248.0 201 259.0 219 272.0 219 C 289.0 217 282.0 195 272.0 172" fill="#ffdf8c"/><path d="M 272.0 195 Q 263.0 220 272.0 218 Q 280.0 219 272.0 195" fill="#fff9d9"/><rect x="213.5" y="303.56" width="117.0" height="86.86" rx="1" fill="#fff8ed" stroke="#b39352" stroke-width="1"/><text x="272.0" y="333.86" text-anchor="middle" fill="#4b3a60" font-family="Georgia, Noto Serif Devanagari, serif" font-size="14.36">Saanjh: एक लौ</text><path d="M234.2 345.98h75.6" stroke="#b39352" stroke-width=".6"/><text x="272.0" y="364.15999999999997" text-anchor="middle" fill="#79628e" font-family="sans-serif" letter-spacing="1.8" font-size="8.64">SLOW SUNDAY</text><text x="272.0" y="378.3" text-anchor="middle" fill="#81718c" font-family="sans-serif" letter-spacing="0.55" font-size="5.861">A LITTLE EVERYDAY WARMTH</text></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 600"><defs>
+<linearGradient id="room" x2="1" y2="1"><stop stop-color="#57456e"/><stop offset="1" stop-color="#3a7776"/></linearGradient>
+<radialGradient id="warmth"><stop stop-color="#f2b866" stop-opacity=".4"/><stop offset="1" stop-color="#f2b866" stop-opacity="0"/></radialGradient>
+<linearGradient id="gold"><stop stop-color="#825c2b"/><stop offset=".4" stop-color="#f0d294"/><stop offset=".7" stop-color="#d1a25c"/><stop offset="1" stop-color="#926934"/></linearGradient>
+<linearGradient id="ceramic"><stop stop-color="#cb967f"/><stop offset=".35" stop-color="#ffe0c4"/><stop offset=".7" stop-color="#f5c5aa"/><stop offset="1" stop-color="#b88177"/></linearGradient>
+<linearGradient id="table" x2="0" y2="1"><stop stop-color="#d4b5a4"/><stop offset="1" stop-color="#967b9c"/></linearGradient>
+<linearGradient id="fire" x2="0" y2="1"><stop stop-color="#c26019"/><stop offset=".5" stop-color="#f2ad43"/><stop offset="1" stop-color="#ffe5a1"/></linearGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+<style>.flame{transform-box:fill-box;transform-origin:50% 100%}.steam{opacity:.35}.halo{opacity:.8}@media(prefers-reduced-motion:no-preference){.flame{animation:flicker 2.1s ease-in-out infinite}.steam{animation:steam 5s ease-in-out infinite}.s2{animation-delay:-2.5s}.halo{animation:light 4s ease-in-out infinite}}@keyframes flicker{0%,100%{transform:rotate(-3deg) scaleY(1)}35%{transform:rotate(3deg) scaleY(.94)}70%{transform:rotate(-1deg) scaleY(1.06)}}@keyframes steam{0%{opacity:0;transform:translateY(8px)}40%{opacity:.35}100%{opacity:0;transform:translateY(-25px)}}@keyframes light{0%,100%{opacity:.6}50%{opacity:1}}</style>
+</defs>
+<path fill="url(#room)" d="M0 0h660v600H0Z"/>
+<path d="M46 430V110q0-52 52-52h246q52 0 52 52v320Z" fill="#b6a1bd" stroke="url(#gold)" stroke-width="2"/>
+<path d="M60 429V111q0-39 39-39h244q39 0 39 39v318" fill="none" stroke="#ccab74" opacity=".25"/>
+<ellipse class="halo" cx="241" cy="284" rx="245" ry="254" fill="url(#warmth)"/>
+<path d="M0 435q330-35 660 0v165H0Z" fill="url(#table)"/>
+<path d="m0 518 660-24m-660 65 660-23" stroke="#f8dfbb" opacity=".12" fill="none"/>
+<ellipse cx="312" cy="476" rx="229" ry="30" fill="#091120" opacity=".35" filter="url(#blur)"/>
+<!-- Clothbound book and layered paper edges. -->
+<path d="m85 428 215-64 156 81-220 74-151-63Z" fill="#306e71" stroke="#ba955d" stroke-width="1.4"/>
+<path d="m94 420 207-61 145 78-210 69-142-59Z" fill="#efe0c5"/>
+<path d="m99 433 137 61 203-65m-335 9 132 61 199-65" fill="none" stroke="#c1a883" stroke-width=".8"/>
+<path d="m87 417 213-65 154 80-218 72Z" fill="#4e9b95" stroke="#d1b275" stroke-width="1.5"/>
+<path d="m113 417 185-53 130 66-191 61Z" fill="none" stroke="#d1b275" opacity=".55"/>
+<path d="m236 479 9 35 9-11 14 3-10-35" fill="#ae7f47"/>
+<!-- Porcelain candle, with a wax pool, gold lip and floating flame. -->
+<path d="M158 286h167v140q0 30-84 30t-83-30Z" fill="url(#ceramic)" stroke="#e6c58a"/>
+<ellipse cx="241" cy="286" rx="84" ry="17" fill="url(#gold)"/>
+<ellipse cx="241" cy="283" rx="77" ry="12" fill="#f7e6bd"/>
+<ellipse cx="241" cy="283" rx="28" ry="7" fill="#f9cd8a"/>
+<path d="M241 282v-14" stroke="#543721" stroke-width="3" stroke-linecap="round"/>
+<g class="flame"><path d="M241 207c-2 15-25 36-19 51q4 14 20 13c14-1 20-13 15-25-5-15-13-24-16-39Z" fill="url(#fire)"/><path d="M241 232c-4 13-12 23-5 34q8 9 13-2c5-10-6-22-8-32Z" fill="#fff2bb"/></g>
+<path d="M172 307v112" stroke="#fff9e6" stroke-width="4" opacity=".4" stroke-linecap="round"/>
+<rect x="187" y="333" width="108" height="80" rx="2" fill="#fff6e3" stroke="url(#gold)" stroke-width="2"/>
+<rect x="192" y="338" width="98" height="70" fill="none" stroke="#b08a4a" stroke-width=".6"/>
+<text x="241" y="367" text-anchor="middle" font-family="Georgia,serif" font-size="23" font-style="italic" fill="#664854">Saanjh</text>
+<text x="241" y="387" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#9b753b">एक लौ</text>
+<!-- A softly steaming cup and its saucer. -->
+<ellipse cx="490" cy="457" rx="99" ry="22" fill="url(#gold)"/>
+<ellipse cx="490" cy="453" rx="88" ry="17" fill="#e1cfb1"/>
+<path d="M429 374q-3 72 61 72t62-72" fill="url(#ceramic)" stroke="#d9b97e"/>
+<path d="M551 383q50-13 38 24-7 21-47 18" fill="none" stroke="#d8bf99" stroke-width="10"/>
+<ellipse cx="490" cy="374" rx="62" ry="17" fill="url(#gold)"/>
+<ellipse cx="490" cy="373" rx="56" ry="13" fill="#4e3527"/>
+<path d="M448 369q41-12 81 1" fill="none" stroke="#dba96b" opacity=".35"/>
+<g fill="none" stroke="#efdcc2" stroke-width="2" stroke-linecap="round"><path class="steam" d="M476 346q-16-20 0-39t-1-36"/><path class="steam s2" d="M500 343q-12-17 1-33t1-31"/></g>
+<path d="M448 397q1 20 15 29" fill="none" stroke="#fff1d5" stroke-width="2" opacity=".4"/>
+<path d="m94 547 90-20" stroke="url(#gold)" stroke-width="5" stroke-linecap="round"/><path d="m91 548 9-2" stroke="#563c36" stroke-width="5" stroke-linecap="round"/>
+<text x="330" y="566" text-anchor="middle" fill="#ead2aa" font-family="Georgia,serif" font-style="italic" font-size="16">less rush. more ritual.</text>
+</svg>
