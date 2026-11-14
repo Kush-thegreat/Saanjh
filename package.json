@@ -1,0 +1,12 @@
+{
+  "name": "saanjh-ek-lau",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A candle storefront with a persistent cart and WhatsApp ordering.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "node server.js",
+    "start": "node server.js",
+    "test": "node --test tests/store.test.js"
+  }
+}

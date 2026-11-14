@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.netlify/
+.env
+.env.*
+*.log
+website B2B/
+.codex/
+.agents/
+.aws/
