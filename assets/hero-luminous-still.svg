@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 700">
+<defs>
+ <linearGradient id="night" x2=".7" y2="1"><stop stop-color="#25354b"/><stop offset="1" stop-color="#101c30"/></linearGradient>
+ <radialGradient id="alcove"><stop stop-color="#a4805c"/><stop offset=".58" stop-color="#68544c"/><stop offset="1" stop-color="#303648"/></radialGradient>
+ <linearGradient id="brass"><stop stop-color="#8b5e29"/><stop offset=".24" stop-color="#e2b66c"/><stop offset=".5" stop-color="#fff0ba"/><stop offset=".74" stop-color="#b88843"/><stop offset="1" stop-color="#725026"/></linearGradient>
+ <linearGradient id="glass"><stop stop-color="#59435e"/><stop offset=".18" stop-color="#a28aa6"/><stop offset=".45" stop-color="#d1baca"/><stop offset=".73" stop-color="#ad93ac"/><stop offset="1" stop-color="#5f485f"/></linearGradient>
+ <linearGradient id="darkglass"><stop stop-color="#122035"/><stop offset=".42" stop-color="#3d4c62"/><stop offset=".7" stop-color="#26364c"/><stop offset="1" stop-color="#101b2c"/></linearGradient>
+ <linearGradient id="wax" x2="0" y2="1"><stop stop-color="#fff3d2"/><stop offset="1" stop-color="#c99d67"/></linearGradient>
+ <linearGradient id="flame" x2="0" y2="1"><stop stop-color="#c65e16"/><stop offset=".45" stop-color="#f5a52d"/><stop offset="1" stop-color="#ffe496"/></linearGradient>
+ <radialGradient id="light"><stop stop-color="#ffc364" stop-opacity=".5"/><stop offset=".45" stop-color="#e9a24c" stop-opacity=".12"/><stop offset="1" stop-color="#f9bc65" stop-opacity="0"/></radialGradient>
+ <linearGradient id="stone" x2="0" y2="1"><stop stop-color="#c2a585"/><stop offset="1" stop-color="#796c68"/></linearGradient>
+ <filter id="soft"><feGaussianBlur stdDeviation="13"/></filter>
+ <filter id="tiny"><feGaussianBlur stdDeviation="3"/></filter>
+ <style>
+ .flame{transform-box:fill-box;transform-origin:50% 100%}.glow{transform-box:fill-box;transform-origin:center}.spark{opacity:.65;transform-box:fill-box;transform-origin:center}.reflection{opacity:.2}.leaf{transform-origin:555px 540px}.back-flame{animation-delay:-.8s!important}
+ @media(prefers-reduced-motion:no-preference){.flame{animation:flicker 1.9s ease-in-out infinite}.glow{animation:breathe 3.7s ease-in-out infinite}.spark{animation:rise 6s ease-out infinite;opacity:0}.s2{animation-delay:-2s;animation-duration:7s}.s3{animation-delay:-4.5s;animation-duration:8s}.s4{animation-delay:-1s;animation-duration:5.5s}.s5{animation-delay:-3.5s;animation-duration:6.8s}.reflection{animation:reflections 3.7s ease-in-out infinite}.leaf{animation:sway 8s ease-in-out infinite}.orbit{animation:twinkle 5s ease-in-out infinite}}
+ @keyframes flicker{0%,100%{transform:rotate(-3deg) scale(.98,1)}18%{transform:rotate(2deg) scale(1.04,.94)}43%{transform:rotate(-2deg) scale(.94,1.07)}68%{transform:rotate(4deg) scale(1.03,.98)}84%{transform:rotate(0) scale(.97,1.03)}}
+ @keyframes breathe{0%,100%{opacity:.65;transform:scale(.94)}55%{opacity:1;transform:scale(1.08)}}
+ @keyframes rise{0%{opacity:0;transform:translate(0,20px) scale(.4)}20%{opacity:.9}65%{opacity:.4}100%{opacity:0;transform:translate(12px,-65px) scale(.2)}}
+ @keyframes reflections{0%,100%{opacity:.14}50%{opacity:.32}}
+ @keyframes sway{0%,100%{transform:rotate(-1deg)}50%{transform:rotate(2deg)}}
+ @keyframes twinkle{0%,100%{opacity:.25}50%{opacity:.8}}
+ *{animation:none!important}</style>
+</defs>
+<path fill="url(#night)" d="M0 0h660v700H0z"/>
+<path d="M65 555V271a265 265 0 0 1 530 0v284Z" fill="url(#alcove)" stroke="url(#brass)" stroke-width="3"/>
+<path d="M82 552V273a248 248 0 0 1 496 0v279" fill="none" stroke="#dfb56d" stroke-opacity=".3"/>
+<path d="M330 19v55m-18-42 18 20 18-20" fill="none" stroke="#d5ac67" stroke-width="1" opacity=".5"/>
+<circle cx="330" cy="85" r="4" fill="#e8c78d"/>
+<ellipse class="glow" cx="279" cy="326" rx="235" ry="245" fill="url(#light)"/>
+<path d="M0 555q330-24 660 0v145H0Z" fill="url(#stone)"/>
+<path d="m0 628 660-29M0 671l660-30" stroke="#e4caa4" stroke-width="1" opacity=".13"/>
+<ellipse cx="343" cy="582" rx="235" ry="36" fill="#111a28" opacity=".35" filter="url(#soft)"/>
+<path d="M102 555h457v35q-228 59-457-2Z" fill="url(#brass)"/>
+<ellipse cx="330" cy="555" rx="228" ry="42" fill="#b99d79" stroke="#efcf91" stroke-width="2"/>
+<ellipse cx="330" cy="555" rx="214" ry="34" fill="#c8b294" stroke="#927141" stroke-width=".8"/>
+<!-- Navy glass candle, behind the main vessel. -->
+<g>
+ <path d="M366 343h136v177q0 25-68 26t-68-26Z" fill="url(#darkglass)" stroke="#d3ab65" stroke-width="1.5"/>
+ <ellipse cx="434" cy="343" rx="68" ry="16" fill="url(#brass)"/>
+ <ellipse cx="434" cy="341" rx="62" ry="12" fill="url(#wax)"/>
+ <path d="M434 341v-15" stroke="#493328" stroke-width="3" stroke-linecap="round"/>
+ <ellipse class="glow" cx="434" cy="302" rx="71" ry="84" fill="url(#light)"/>
+ <g class="flame back-flame"><path d="M434 277c-3 13-17 25-12 39q4 12 13 11t12-12c3-13-10-25-13-38Z" fill="url(#flame)"/><path d="M434 299c-3 9-8 16-3 24q8 7 10-3c1-8-6-15-7-21Z" fill="#fff1b7"/></g>
+ <path class="reflection" d="M379 359v145m8-145v156" stroke="#fff2d6" stroke-width="3" stroke-linecap="round"/>
+ <rect x="387" y="407" width="94" height="83" rx="2" fill="#e9d6b5" stroke="#be934f"/>
+ <text x="434" y="434" text-anchor="middle" font-family="Georgia,serif" font-size="17" fill="#443524">Saanjh</text>
+ <path d="M403 446h62" stroke="#a07839"/>
+ <text x="434" y="466" text-anchor="middle" font-family="sans-serif" font-size="6.5" letter-spacing="1.7" fill="#755d3c">EVENING RITUAL</text>
+</g>
+<!-- Sculpted wax, curved glass, metallic lip and reflected candlelight. -->
+<g>
+ <path d="M164 351h211v186q0 35-106 35t-105-35Z" fill="url(#glass)" stroke="#d9b779" stroke-width="1.6"/>
+ <path d="M171 372v160q0 28 97 29t99-27V372" fill="none" stroke="#f2d9de" opacity=".24" stroke-width="2"/>
+ <ellipse cx="269" cy="351" rx="106" ry="21" fill="url(#brass)"/>
+ <ellipse cx="269" cy="348" rx="99" ry="16" fill="#634c55"/>
+ <ellipse cx="269" cy="346" rx="94" ry="13" fill="url(#wax)"/>
+ <ellipse cx="269" cy="345" rx="33" ry="8" fill="#fbd6a0"/>
+ <ellipse class="reflection" cx="269" cy="345" rx="54" ry="10" fill="#fff4c9"/>
+ <path d="M269 344q-3-10 0-19" stroke="#4a3020" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+ <ellipse class="glow" cx="269" cy="295" rx="110" ry="120" fill="url(#light)"/>
+ <g class="flame"><path d="M268 253c-3 21-28 37-22 58q5 18 23 18c17-1 24-15 20-29-4-17-18-27-21-47Z" fill="url(#flame)" stroke="#d18624" stroke-width=".8"/><path d="M269 281c-3 14-17 28-10 40q8 13 17 2c9-11-4-27-7-42Z" fill="#ffe8a0"/><path d="M269 307q-10 16 0 22 10-6 0-22" fill="#fff9d9"/></g>
+ <path class="reflection" d="M181 377v150m9-148v158" stroke="#fff4e4" stroke-width="4" stroke-linecap="round"/>
+ <path d="M352 375v160" stroke="#fce2bf" opacity=".16" stroke-width="2"/>
+ <rect x="202" y="409" width="134" height="105" rx="3" fill="#f6e9d3" stroke="url(#brass)" stroke-width="2"/>
+ <rect x="208" y="415" width="122" height="93" rx="1" fill="none" stroke="#b78c49" stroke-width=".6"/>
+ <path d="m269 423-4 7 4-2 4 2Z" fill="#ab7d37"/>
+ <text x="269" y="454" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="29" fill="#594254">Saanjh</text>
+ <text x="269" y="474" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#8a6636">एक लौ</text>
+ <path d="M225 485h88" stroke="#b78c49" stroke-width=".7"/>
+ <text x="269" y="499" text-anchor="middle" font-family="sans-serif" font-size="7" letter-spacing="2" fill="#7c6445">A LITTLE EVERYDAY WARMTH</text>
+</g>
+<g class="leaf" fill="url(#brass)" stroke="#dab272" stroke-width=".6"><path d="M557 565q-44-159 12-307" fill="none" stroke-width="2"/><path d="M548 496q-55-29-43-66 39 12 43 66Zm-3-62q42-26 35-57-34 11-35 57Zm1-58q-42-29-29-57 31 10 29 57Zm11-54q36-18 26-48-27 12-26 48Z"/></g>
+<g fill="#fbd78d"><path class="spark" d="m228 256 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/><path class="spark s2" d="m308 228 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/><path class="spark s3" d="m286 188 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z"/><circle class="spark s4" cx="245" cy="221" r="2"/><circle class="spark s5" cx="317" cy="288" r="2"/><path class="orbit" d="m472 175 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/><circle class="orbit" cx="191" cy="190" r="1.8"/><circle class="orbit" cx="397" cy="122" r="1.5"/></g>
+<ellipse class="reflection" cx="279" cy="596" rx="78" ry="10" fill="#ffd58c" filter="url(#tiny)"/>
+<text x="330" y="654" text-anchor="middle" fill="#f0d9ae" font-family="Georgia,serif" font-style="italic" font-size="17" letter-spacing="1">a softer kind of evening</text>
+</svg>

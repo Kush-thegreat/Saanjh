@@ -10,7 +10,7 @@
   const motionAllowed = () => !preference.matches && !paused;
   const syncFlame = () => {
     const image = document.querySelector('.hero-visual>img[src*="hero"]');
-    if (image) image.src = motionAllowed() ? 'assets/hero.svg' : 'assets/hero-still.svg';
+    if (image) image.src = motionAllowed() ? 'assets/hero-luminous.svg' : 'assets/hero-luminous-still.svg';
   };
   syncFlame();
   const button = document.createElement('button');
