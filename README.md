@@ -26,7 +26,7 @@ WhatsApp links include product names, chosen flavors, quantities, line amounts, 
 
 ## Hosting
 
-Publish all three HTML files, `styles.css`, `app.js`, and `assets/` on a static host. `server.js`, `tests/`, and `package.json` are development files. Google Fonts is optional; system fonts are available as a fallback. No public deployment is configured.
+Run `npm run build` to prepare the public website in `dist/`. The build includes all storefront pages, scripts, styles, and assets. Netlify reads `netlify.toml` and publishes `dist/` automatically after a push to the connected production branch (`main`). Development files and the separate B2B folder are excluded from the published output. Google Fonts is optional; system fonts are available as a fallback.
 
 ## Individual product pages
 
