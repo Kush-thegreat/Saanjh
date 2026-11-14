@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 700">
 <defs>
- <linearGradient id="night" x2=".7" y2="1"><stop stop-color="#e9bed4"/><stop offset="1" stop-color="#c9b9e2"/></linearGradient>
- <radialGradient id="alcove"><stop stop-color="#f9d8b9"/><stop offset=".58" stop-color="#ecb9b2"/><stop offset="1" stop-color="#c5a3c7"/></radialGradient>
+ <linearGradient id="night" x2=".7" y2="1"><stop stop-color="#25354b"/><stop offset="1" stop-color="#101c30"/></linearGradient>
+ <radialGradient id="alcove"><stop stop-color="#796c86"/><stop offset=".58" stop-color="#4b465b"/><stop offset="1" stop-color="#293347"/></radialGradient>
  <linearGradient id="brass"><stop stop-color="#8b5e29"/><stop offset=".24" stop-color="#e2b66c"/><stop offset=".5" stop-color="#fff0ba"/><stop offset=".74" stop-color="#b88843"/><stop offset="1" stop-color="#725026"/></linearGradient>
  <linearGradient id="glass"><stop stop-color="#66508c"/><stop offset=".18" stop-color="#a17ac5"/><stop offset=".45" stop-color="#e0bdee"/><stop offset=".73" stop-color="#bf8bd2"/><stop offset="1" stop-color="#77518c"/></linearGradient>
- <linearGradient id="darkglass"><stop stop-color="#226765"/><stop offset=".42" stop-color="#76bcb0"/><stop offset=".7" stop-color="#43978f"/><stop offset="1" stop-color="#1e5d62"/></linearGradient>
+ <linearGradient id="darkglass"><stop stop-color="#18253e"/><stop offset=".42" stop-color="#50617d"/><stop offset=".7" stop-color="#2b3c58"/><stop offset="1" stop-color="#142239"/></linearGradient>
  <linearGradient id="wax" x2="0" y2="1"><stop stop-color="#fff3d2"/><stop offset="1" stop-color="#c99d67"/></linearGradient>
  <linearGradient id="flame" x2="0" y2="1"><stop stop-color="#c65e16"/><stop offset=".45" stop-color="#f5a52d"/><stop offset="1" stop-color="#ffe496"/></linearGradient>
  <radialGradient id="light"><stop stop-color="#ffc364" stop-opacity=".5"/><stop offset=".45" stop-color="#e9a24c" stop-opacity=".12"/><stop offset="1" stop-color="#f9bc65" stop-opacity="0"/></radialGradient>
- <linearGradient id="stone" x2="0" y2="1"><stop stop-color="#e4bbad"/><stop offset="1" stop-color="#b69bc4"/></linearGradient>
+ <linearGradient id="stone" x2="0" y2="1"><stop stop-color="#baa98f"/><stop offset="1" stop-color="#766c7a"/></linearGradient>
  <filter id="soft"><feGaussianBlur stdDeviation="13"/></filter>
  <filter id="tiny"><feGaussianBlur stdDeviation="3"/></filter>
  <linearGradient id="sheen"><stop stop-color="#fff7df" stop-opacity="0"/><stop offset=".5" stop-color="#fff7df" stop-opacity=".24"/><stop offset="1" stop-color="#fff7df" stop-opacity="0"/></linearGradient>
@@ -85,5 +85,5 @@
 <g fill="#fbd78d"><path class="spark" d="m228 256 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/><path class="spark s2" d="m308 228 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/><path class="spark s3" d="m286 188 2 5 5 2-5 2-2 5-2-5-5-2 5-2Z"/><circle class="spark s4" cx="245" cy="221" r="2"/><circle class="spark s5" cx="317" cy="288" r="2"/><path class="orbit" d="m472 175 2 6 6 2-6 2-2 6-2-6-6-2 6-2Z"/><circle class="orbit" cx="191" cy="190" r="1.8"/><circle class="orbit" cx="397" cy="122" r="1.5"/></g>
 <ellipse class="reflection" cx="279" cy="596" rx="78" ry="10" fill="#ffd58c" filter="url(#tiny)"/>
 <g class="table-light" fill="#ffdaa0" opacity=".3"><ellipse cx="272" cy="613" rx="44" ry="3"/><ellipse cx="280" cy="624" rx="24" ry="2"/><ellipse cx="435" cy="584" rx="32" ry="3"/></g>
-<text x="330" y="654" text-anchor="middle" fill="#68476e" font-family="Georgia,serif" font-style="italic" font-size="17" letter-spacing="1">a softer kind of evening</text>
+<text x="330" y="654" text-anchor="middle" fill="#e5d4b6" font-family="Georgia,serif" font-style="italic" font-size="17" letter-spacing="1">a softer kind of evening</text>
 </svg>
