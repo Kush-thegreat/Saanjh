@@ -234,5 +234,5 @@ if (window.IntersectionObserver && !window.matchMedia?.('(prefers-reduced-motion
       revealObserver.unobserve(entry.target);
     });
   }, { threshold: .12 });
-  document.querySelectorAll('.hero-copy, .hero-visual, .mood-heading, .mood-card, .mood-bottom, .section-heading, .collection-invitation, .ritual-art, .ritual-copy, .steps article, .closing, .catalog-intro, .catalog-help, .detail-gallery, .detail-content, .checkout-intro').forEach(element => revealObserver.observe(element));
+  document.querySelectorAll('.hero-copy, .hero-visual, .grind-copy, .grind-feature, .mood-heading, .mood-card, .mood-bottom, .section-heading, .collection-invitation, .ritual-art, .ritual-copy, .steps article, .closing, .catalog-intro, .catalog-help, .detail-gallery, .detail-content, .checkout-intro').forEach(element => revealObserver.observe(element));
 }
