@@ -8,7 +8,7 @@ const pages = [
   'index.html', 'collection.html', 'checkout.html',
   'sunset-crush.html', 'cupids-bubblegum.html',
   'lavender-love-letter.html', 'bubble-boba.html', 'sundae.html',
-  'styles.css', 'app.js', 'product.js'
+  'styles.css', 'app.js', 'product.js', 'golden-hour.css', 'golden-hour.js'
 ];
 
 fs.mkdirSync(output, { recursive: true });

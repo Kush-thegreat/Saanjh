@@ -63,7 +63,7 @@ function renderProducts(filter = 'all') {
       <p class="scent-notes">${product.notes}</p>
       <div class="product-bottom"><span class="product-unit">${product.unit}${product.scented ? '<span class="unit-scented">Scented</span>' : ''}</span><a class="add-button" href="${product.id}.html">${product.variants ? 'Choose flavor' : 'View candle'} <span aria-hidden="true">↗</span></a></div>
     </article>`).join('');
-  if (!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+  if (!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches && !document.documentElement?.classList.contains('motion-paused')) {
     document.querySelectorAll('.product-card').forEach((card, index) => {
       card.animate?.([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 480, delay: index * 55, easing: 'ease-out', fill: 'backwards' });
     });
@@ -80,7 +80,7 @@ function addToCart(id, variant, quantity = 1) {
   if (item) item.quantity += quantity;
   else cart.push(entry);
   saveCart();
-  if (!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) {
+  if (!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches && !document.documentElement?.classList.contains('motion-paused')) {
     document.querySelector('#open-cart')?.animate?.([{ transform: 'translateY(0)' }, { transform: 'translateY(-5px)', offset: .4 }, { transform: 'translateY(0)' }], { duration: 420, easing: 'ease-out' });
     document.querySelector('#cart-count')?.animate?.([{ transform: 'scale(1)' }, { transform: 'scale(1.22)', offset: .4 }, { transform: 'scale(1)' }], { duration: 420 });
   }
@@ -226,9 +226,10 @@ if (window.IntersectionObserver && !window.matchMedia?.('(prefers-reduced-motion
   const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
+      if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches || document.documentElement?.classList.contains('motion-paused')) { revealObserver.unobserve(entry.target); return; }
       entry.target.animate?.([{ opacity: 0, transform: 'translateY(20px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 650, easing: 'cubic-bezier(.2,.65,.3,1)' });
       revealObserver.unobserve(entry.target);
     });
   }, { threshold: .12 });
-  document.querySelectorAll('.hero-copy, .hero-visual, .section-heading, .collection-invitation, .ritual-art, .ritual-copy, .steps article, .closing, .catalog-intro, .catalog-help, .detail-gallery, .detail-content, .checkout-intro').forEach(element => revealObserver.observe(element));
+  document.querySelectorAll('.hero-copy, .hero-visual, .mood-heading, .mood-card, .mood-bottom, .section-heading, .collection-invitation, .ritual-art, .ritual-copy, .steps article, .closing, .catalog-intro, .catalog-help, .detail-gallery, .detail-content, .checkout-intro').forEach(element => revealObserver.observe(element));
 }
