@@ -14,7 +14,7 @@ Run `npm run dev` and open http://localhost:3000 (or the configured PORT). Run `
 
 ## Catalog
 
-Products and prices are defined in `app.js`: Sunset Crush ₹150; Cupid's bubblegum ₹120; Lavender Love Letter ₹125; Bubble boba (set of two) ₹80; sundae candle ₹199 per flavor. The sundae listing defaults to Chocolate Sundae and also offers Mango Sunshine Sundae. Selected flavors use separate cart lines and the matching photograph. No unconfirmed weights, burn times, wax types, or fragrance claims are listed.
+Products and prices are defined in `app.js`: Sunset Crush ₹150; Cupid's bubblegum ₹140; Lavender Love Letter ₹125; Bubble boba (set of two) ₹80; sundae candle ₹199 per flavor. The sundae listing defaults to Chocolate Sundae and also offers Mango Sunshine Sundae. Selected flavors use separate cart lines and the matching photograph. No unconfirmed weights, burn times, wax types, or fragrance claims are listed.
 
 Product photographs are the supplied originals, copied into `assets/` without alterations. Descriptions refer to visual appearance. Hero and story images remain illustrations. Update the catalog and image paths in `app.js` when needed.
 

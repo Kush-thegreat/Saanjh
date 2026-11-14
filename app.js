@@ -2,7 +2,7 @@
 
 const PRODUCTS = Object.freeze([
   { id: 'sunset-crush', name: 'Sunset Crush', notes: 'A golden jar candle with a blush of pink hearts.', category: 'jars', price: 150, image: 'sunset-crush.png', unit: '1 candle', tag: 'READY TO GLOW' },
-  { id: 'cupids-bubblegum', name: "Cupid's bubblegum", notes: 'Pink and green, with a little love at the centre.', category: 'jars', price: 120, image: 'cupids-bubblegum.png', unit: '1 candle', tag: '' },
+  { id: 'cupids-bubblegum', name: "Cupid's bubblegum", notes: 'Pink and green, with a little love at the centre.', category: 'jars', price: 140, image: 'cupids-bubblegum.png', unit: '1 candle', tag: '' },
   { id: 'lavender-love-letter', name: 'Lavender Love Letter', notes: 'A lavender-coloured candle, finished with a golden heart.', category: 'jars', price: 125, image: 'lavender-love-letter.png', unit: '1 candle', tag: '' },
   { id: 'bubble-boba', name: 'Bubble boba', notes: 'A playful pair in green and golden yellow.', category: 'sculptural', price: 80, image: 'bubble-boba.png', unit: 'Set of 2', tag: 'A LITTLE DUO' },
   { id: 'sundae', name: 'Chocolate Sundae', scented: true, notes: 'Scented dessert candles. Both Chocolate Sundae and Mango Sunshine Sundae are scented.', category: 'dessert', price: 199, image: 'chocolate-sundae.png', unit: '1 candle', tag: 'SCENTED · 2 FLAVORS', variants: [
@@ -96,6 +96,7 @@ function buildOrderMessage() {
   });
   const total = cart.reduce((sum, item) => sum + findProduct(item.id).price * item.quantity, 0);
   const message = ["Hi! I'd like to enquire about ordering these candles:", '', ...lines, '', `Product subtotal: ${currency(total)}`, 'Please confirm product availability, delivery charges, and payment details.'];
+  message.push(total > 499 ? 'Delivery: Free (order above ₹499).' : 'Free delivery on orders above ₹499. Please confirm delivery charges for this order.');
   if (note.value.trim()) message.push('', `Note: ${note.value.trim()}`);
   message.push('', 'Sent from the Saanjh: एक लौ.');
   return message.join('\n');
@@ -122,6 +123,8 @@ function renderCart() {
   document.querySelector('#open-cart')?.setAttribute('aria-label', `Open shopping bag, ${count} ${count === 1 ? 'item' : 'items'}`);
   document.querySelector('#cart-summary').hidden = cart.length === 0;
   document.querySelector('#cart-total').textContent = currency(total);
+  const deliveryStatus = document.querySelector('#delivery-status');
+  if (deliveryStatus) deliveryStatus.textContent = total > 499 ? '✦ Your order qualifies for free delivery.' : 'Free delivery on orders above ₹499.';
   document.querySelector('#cart-items').innerHTML = cart.length ? cart.map(item => {
     const product = findProduct(item.id);
     return `<article class="cart-item"><img src="assets/${itemImage(item)}" alt="${itemName(item)}"><div class="cart-item-detail"><h3>${itemName(item)}</h3><p>${product.unit}${product.scented ? ' · Scented' : ''} · ${currency(product.price)} each</p><div class="item-controls"><div class="quantity"><button data-quantity="${itemKey(item)}" data-delta="-1" aria-label="Decrease ${itemName(item)} quantity">−</button><span aria-label="Quantity ${item.quantity}">${item.quantity}</span><button data-quantity="${itemKey(item)}" data-delta="1" aria-label="Increase ${itemName(item)} quantity" ${item.quantity >= 99 ? 'disabled' : ''}>+</button></div><button class="remove-item" data-remove="${itemKey(item)}" aria-label="Remove ${itemName(item)}">Remove</button><span class="item-price">${currency(product.price * item.quantity)}</span></div></div></article>`;

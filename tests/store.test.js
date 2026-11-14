@@ -48,7 +48,7 @@ function storefront(stored = null, storageUnavailable = false, checkout = false,
 test('the catalog has the approved five products, prices, photos, and pair unit', () => {
   const shop = storefront();
   assert.equal(shop.evaluate('PRODUCTS.length'), 5);
-  assert.equal(shop.evaluate('PRODUCTS.map(p=>p.price).join(",")'), '150,120,125,80,199');
+  assert.equal(shop.evaluate('PRODUCTS.map(p=>p.price).join(",")'), '150,140,125,80,199');
   assert.equal(shop.evaluate('findProduct("bubble-boba").unit'), 'Set of 2');
   assert.equal(shop.evaluate('findProduct("sundae").image'), 'chocolate-sundae.png');
   for (const file of shop.evaluate('PRODUCTS.flatMap(p=>p.variants?p.variants.map(v=>v.image):[p.image])')) {
@@ -60,11 +60,24 @@ test('empty cart hides checkout summary and links remain a general chat', () => 
   assert.equal(shop.element('#cart-summary').hidden, true);
   assert.equal(shop.element('#hero-order').href, 'https://wa.me/918792517450');
 });
+
+test('free delivery applies only above 499 and updates after cart changes', () => {
+  const shop = storefront();
+  shop.evaluate("cart = [{id:'sundae',variant:'chocolate',quantity:1},{id:'sunset-crush',quantity:2}]; renderCart()");
+  assert.equal(shop.element('#cart-total').textContent, '₹499');
+  assert.doesNotMatch(shop.message(), /Delivery: Free/);
+  shop.add('cupids-bubblegum');
+  assert.match(shop.message(), /Delivery: Free/);
+  assert.match(shop.element('#delivery-status').textContent, /qualifies/);
+  shop.remove('cupids-bubblegum');
+  assert.doesNotMatch(shop.message(), /Delivery: Free/);
+  assert.doesNotMatch(shop.element('#delivery-status').textContent, /qualifies/);
+});
 test('adding all five products calculates the real prices', () => {
   const shop = storefront();
   ['sunset-crush','cupids-bubblegum','lavender-love-letter','bubble-boba'].forEach(id=>shop.add(id));
   shop.add('sundae','chocolate');
-  assert.equal(shop.element('#cart-total').textContent, '₹674');
+  assert.equal(shop.element('#cart-total').textContent, '₹694');
   assert.equal(shop.element('#cart-count').textContent, 5);
   assert.match(shop.message(), /Bubble boba \(Set of 2\) × 1 — ₹80/);
   assert.doesNotMatch(shop.message(), /180 g|sample storefront/);

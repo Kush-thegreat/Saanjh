@@ -9,7 +9,7 @@
   if (paused || preference.matches) document.getAnimations().forEach(animation => animation.cancel());
   const motionAllowed = () => !preference.matches && !paused;
   const syncFlame = () => {
-    const image = document.querySelector('.hero-visual>img');
+    const image = document.querySelector('.hero-visual>img[src*="hero"]');
     if (image) image.src = motionAllowed() ? 'assets/hero.svg' : 'assets/hero-still.svg';
   };
   syncFlame();
