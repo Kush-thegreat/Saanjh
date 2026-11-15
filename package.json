@@ -7,6 +7,6 @@
     "build": "node scripts/build.js",
     "dev": "node server.js",
     "start": "node server.js",
-    "test": "node --test tests/store.test.js"
+    "test": "node --test tests/store.test.js tests/reviews.test.js"
   }
 }

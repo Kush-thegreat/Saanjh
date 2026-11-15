@@ -61,6 +61,7 @@ function renderProducts(filter = 'all') {
       <div class="product-picture"><a class="product-photo-button" href="${product.id}.html" aria-label="View ${product.name}"><img src="assets/${product.image}" alt="${product.name}${product.id === 'bubble-boba' ? ', set of two candles' : ' candle'}" loading="lazy" width="600" height="750"></a>${product.tag ? `<span class="product-tag">${product.tag}</span>` : ''}</div>
       <div class="product-meta"><h3><a href="${product.id}.html">${product.name}</a></h3><span class="price">${currency(product.price)}</span></div>
       <p class="scent-notes">${product.notes}</p>
+      <a class="catalog-reviews-link" href="${product.id}-reviews.html">Customer reviews ↗</a>
       <div class="product-bottom"><span class="product-unit">${product.unit}${product.scented ? '<span class="unit-scented">Scented</span>' : ''}</span><a class="add-button" href="${product.id}.html">${product.variants ? 'Choose flavor' : 'View candle'} <span aria-hidden="true">↗</span></a></div>
     </article>`).join('');
   if (!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches && !document.documentElement?.classList.contains('motion-paused')) {

@@ -9,7 +9,7 @@ const server = http.createServer((req, res) => {
   catch { res.writeHead(400); res.end('Bad request'); return; }
   const relative = pathname === '/' ? 'index.html' : pathname.replace(/^\/+/, '');
   const filename = path.resolve(root, relative);
-  const isAllowed = ['index.html', 'checkout.html', 'collection.html', 'sunset-crush.html', 'cupids-bubblegum.html', 'lavender-love-letter.html', 'bubble-boba.html', 'sundae.html', 'product.js', 'styles.css', 'app.js', 'golden-hour.css', 'golden-hour.js'].includes(relative) || (relative.startsWith('assets/') && ['.svg', '.png'].includes(path.extname(relative)));
+  const isAllowed = ['index.html', 'checkout.html', 'collection.html', 'sunset-crush.html', 'cupids-bubblegum.html', 'lavender-love-letter.html', 'bubble-boba.html', 'sundae.html', 'product.js', 'styles.css', 'app.js', 'golden-hour.css', 'golden-hour.js', 'reviews.js', 'sunset-crush-reviews.html', 'cupids-bubblegum-reviews.html', 'lavender-love-letter-reviews.html', 'bubble-boba-reviews.html', 'sundae-reviews.html'].includes(relative) || (relative.startsWith('assets/') && ['.svg', '.png'].includes(path.extname(relative)));
   if (!filename.startsWith(root + path.sep) || !isAllowed) { res.writeHead(404); res.end('Not found'); return; }
   fs.readFile(filename, (error, data) => {
     if (error) { res.writeHead(404); res.end('Not found'); return; }
