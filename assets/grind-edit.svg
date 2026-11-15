@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 560"><defs>
+<linearGradient id="bg" x2="1" y2="1"><stop stop-color="#333537"/><stop offset="1" stop-color="#0c0d0e"/></linearGradient>
+<linearGradient id="steel"><stop stop-color="#3e4144"/><stop offset=".35" stop-color="#a1a5a8"/><stop offset=".55" stop-color="#dbdedf"/><stop offset="1" stop-color="#45494c"/></linearGradient>
+<linearGradient id="jar"><stop stop-color="#0b0c0d"/><stop offset=".25" stop-color="#34373a"/><stop offset=".65" stop-color="#1f2225"/><stop offset="1" stop-color="#090a0b"/></linearGradient>
+<linearGradient id="fire" x2="0" y2="1"><stop stop-color="#b94723"/><stop offset=".5" stop-color="#dd8747"/><stop offset="1" stop-color="#f7d4a2"/></linearGradient>
+<radialGradient id="halo"><stop stop-color="#b34227" stop-opacity=".25"/><stop offset="1" stop-color="#b34227" stop-opacity="0"/></radialGradient>
+<filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter>
+<style>.flame{transform-box:fill-box;transform-origin:50% 100%}@media(prefers-reduced-motion:no-preference){.flame{animation:flicker 2.5s ease-in-out infinite}}@keyframes flicker{0%,100%{transform:rotate(-2deg) scaleY(1)}40%{transform:rotate(3deg) scaleY(.94)}75%{transform:rotate(-1deg) scaleY(1.06)}}</style>
+</defs><path fill="url(#bg)" d="M0 0h640v560H0Z"/>
+<g stroke="#fff" opacity=".035"><path d="M0 80h640M0 160h640M0 240h640M0 320h640M0 400h640M80 0v560M160 0v560M240 0v560M320 0v560M400 0v560M480 0v560M560 0v560"/></g>
+<path d="M0 408 640 324v236H0Z" fill="#131517"/><path d="m0 414 640-84" stroke="#686c70" opacity=".3"/>
+<text x="36" y="103" font-family="Arial,sans-serif" font-size="80" font-weight="900" letter-spacing="-5" fill="#fff" opacity=".045">AFTER HOURS.</text>
+<ellipse cx="330" cy="438" rx="153" ry="25" fill="#000" filter="url(#shadow)"/>
+<!-- A graphic still life, distinct from the product photography. -->
+<g transform="translate(60 403) rotate(-12)"><rect x="0" y="-8" width="390" height="16" rx="4" fill="url(#steel)"/><g fill="#272a2d" stroke="#64686c"><rect x="7" y="-38" width="20" height="76" rx="3"/><rect x="27" y="-51" width="23" height="102" rx="3"/><rect x="340" y="-51" width="23" height="102" rx="3"/><rect x="363" y="-38" width="20" height="76" rx="3"/></g></g>
+<ellipse cx="348" cy="224" rx="170" ry="169" fill="url(#halo)"/>
+<path d="M244 231h199v171q0 32-99 32t-100-32Z" fill="url(#jar)" stroke="#72767a" stroke-width="1.3"/>
+<ellipse cx="344" cy="231" rx="100" ry="19" fill="url(#steel)"/><ellipse cx="344" cy="228" rx="93" ry="14" fill="#5c5550"/><ellipse cx="344" cy="226" rx="88" ry="10" fill="#c9b9a3"/>
+<path d="M344 225v-13" stroke="#2a201b" stroke-width="3"/>
+<g class="flame"><path d="M344 153c-3 15-24 32-21 48q3 15 21 15t20-16c1-17-16-30-20-47Z" fill="url(#fire)"/><path d="M344 180c-3 12-12 21-6 30q6 9 12 0t-6-30Z" fill="#ffebc6"/></g>
+<path d="M256 250v148" stroke="#eee" stroke-width="3" opacity=".13"/><path d="M428 252v145" stroke="#fff" opacity=".08"/>
+<rect x="272" y="285" width="144" height="97" fill="#1b1d1f" stroke="#81868a"/>
+<rect x="279" y="292" width="130" height="83" fill="none" stroke="#484c50"/>
+<text x="344" y="319" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" letter-spacing="4" fill="#a4a7a9">SAANJH</text>
+<text x="344" y="349" text-anchor="middle" font-family="Arial,sans-serif" font-size="31" font-weight="900" letter-spacing="1" fill="#ececea">GRIND.</text>
+<path d="M322 362h44" stroke="#ba4638" stroke-width="3"/>
+<path d="M32 32h50M32 32v50M608 478v50h-50" fill="none" stroke="#9b3d32" stroke-width="2"/>
+<text x="36" y="513" font-family="Arial,sans-serif" font-size="10" letter-spacing="4" fill="#a5a8aa">YOUR SPACE. YOUR PACE.</text>
+</svg>
